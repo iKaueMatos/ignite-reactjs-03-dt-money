@@ -5,7 +5,7 @@ import { TransactionsContext } from '../contexts/TransactionsContext'
 export function useSummary() {
   const transactions = useContextSelector(TransactionsContext, (context) => {
     return context.transactions
-  })
+});
 
   const summary = useMemo(() => {
     return transactions.reduce(

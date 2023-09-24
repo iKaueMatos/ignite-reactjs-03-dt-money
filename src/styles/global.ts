@@ -9,11 +9,11 @@ export const GlobalStyle = createGlobalStyle`
 
   :focus {
     outline: 0;
-    box-shadow: 0 0 0 2px ${(props) => props.theme['green-500']};
+    box-shadow: 0 0 0 2px ${(props) => props.theme['orange-900']};
   }
 
   body {
-    background-color: ${(props) => props.theme['gray-800']};
+    background-color: ${(props) => props.theme['white']};
     color: ${(props) => props.theme['gray-100']};
     -webkit-font-smoothing: antialiased;
   }

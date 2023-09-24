@@ -14,7 +14,7 @@ export const Content = styled(Dialog.Content)`
   min-width: 32rem;
   border-radius: 6px;
   padding: 2.5rem 3rem;
-  background: ${(props) => props.theme['gray-800']};
+  background: ${(props) => props.theme['orange-900']};
 
   position: fixed;
   top: 50%;
@@ -31,19 +31,19 @@ export const Content = styled(Dialog.Content)`
     input {
       border-radius: 6px;
       border: 0;
-      background: ${(props) => props.theme['gray-900']};
-      color: ${(props) => props.theme['gray-300']};
+      background: ${(props) => props.theme.white};
+      color: ${(props) => props.theme.black};
       padding: 1rem;
 
       &::placeholder {
-        color: ${(props) => props.theme['gray-500']};
+        color: ${(props) => props.theme.black};
       }
     }
 
     button[type='submit'] {
       height: 50px;
       border: 0;
-      background: ${(props) => props.theme['green-500']};
+      background: ${(props) => props.theme.black};
       color: ${(props) => props.theme.white};
       font-weight: bold;
       padding: 0 1.25rem;
@@ -57,8 +57,9 @@ export const Content = styled(Dialog.Content)`
       }
 
       &:not(:disabled):hover {
-        background: ${(props) => props.theme['green-700']};
+        background: ${(props) => props.theme.white};
         transition: background-color 0.2s;
+        color: ${props => props.theme['black']};
       }
     }
   }
@@ -72,7 +73,7 @@ export const CloseButton = styled(Dialog.Close)`
   right: 1.5rem;
   line-height: 0;
   cursor: pointer;
-  color: ${(props) => props.theme['gray-500']};
+  color: ${(props) => props.theme['white']};
 `
 
 export const TransactionType = styled(RadioGroup.Root)`
@@ -89,7 +90,7 @@ interface TransactionTypeButtonProps {
 export const TransactionTypeButton = styled(
   RadioGroup.Item,
 )<TransactionTypeButtonProps>`
-  background: ${(props) => props.theme['gray-700']};
+  background: ${(props) => props.theme['white']};
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -98,7 +99,7 @@ export const TransactionTypeButton = styled(
   border-radius: 6px;
   cursor: pointer;
   border: 0;
-  color: ${(props) => props.theme['gray-300']};
+  color: ${(props) => props.theme['black']};
 
   svg {
     color: ${(props) =>
@@ -109,7 +110,8 @@ export const TransactionTypeButton = styled(
 
   &[data-state='unchecked']:hover {
     transition: background-color 0.2s;
-    background: ${(props) => props.theme['gray-600']};
+    background: ${(props) => props.theme['black']};
+    color: ${props => props.theme['white']};
   }
 
   &[data-state='checked'] {
