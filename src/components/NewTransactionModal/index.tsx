@@ -1,9 +1,9 @@
-import { zodResolver } from '@hookform/resolvers/zod'
+import * as z from 'zod'
 import * as Dialog from '@radix-ui/react-dialog'
-import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
+import { zodResolver } from '@hookform/resolvers/zod'
 import { Controller, useForm } from 'react-hook-form'
 import { useContextSelector } from 'use-context-selector'
-import * as z from 'zod'
+import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
 import { TransactionsContext } from '../../contexts/TransactionsContext'
 
 import {
@@ -19,7 +19,7 @@ const newTransactionFormSchema = z.object({
   price: z.number(),
   category: z.string(),
   type: z.enum(['income', 'outcome']),
-})
+});
 
 type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>
 
